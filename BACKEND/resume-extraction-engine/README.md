@@ -8,14 +8,15 @@ PDF/DOCX in → text (embedded or OCR) → structured JSON with source page, sou
 # system deps (Ubuntu/Debian): OCR + PDF rasteriser
 sudo apt-get install -y tesseract-ocr poppler-utils
 
-cd backend
+cd BACKEND/resume-extraction-engine/backend
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements-dev.txt
 uvicorn app.main:app --reload --port 8000        # http://localhost:8000/docs
 
-cd ../frontend
-cp .env.local.example .env.local
-npm install && npm run dev                       # http://localhost:3000
+The frontend is maintained separately in the repository's `FRONTEND` directory.
+It communicates with this service through the API. Set
+`NEXT_PUBLIC_RESUME_API_URL=http://localhost:8000` for local development, then
+run the frontend from that directory.
 ```
 Docker (backend only): `cp .env.example .env && docker compose up --build`.
 
@@ -57,7 +58,6 @@ Real-world accuracy must be measured on your own resumes before you rely on it.
 * No user accounts: ownership = per-upload secret token. Add real auth before exposing publicly.
 * Malware scanning is ClamAV-optional (`CLAMAV_ENABLED`), off by default; the built-in check only rejects PDF
   JavaScript/Launch actions and macro-enabled DOCX.
-* Frontend is plain Tailwind (no shadcn/ui). It type-checks and builds, but I did not drive it in a browser.
 * Docling fallback is wired in but untested (not installed here).
 * Edit in UI is limited to personal-information fields; other sections are read-only (the PUT API accepts any field).
 * See `docs/ARCHITECTURE.md` for confidence rules and known limitations.
