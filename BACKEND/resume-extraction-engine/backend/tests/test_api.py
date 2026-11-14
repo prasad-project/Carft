@@ -93,6 +93,14 @@ def test_pdf_javascript_rejected(tmp_path):
     assert r.json()["detail"]["code"] == "ACTIVE_CONTENT"
 
 
+def test_pdf_text_containing_action_names_is_allowed(tmp_path):
+    d = pymupdf.open()
+    d.new_page().insert_text((50, 50), "/JavaScript /JS /Launch /OpenAction")
+    f = tmp_path / "text.pdf"
+    d.save(str(f), deflate=False)
+    assert _upload(f).status_code == 201
+
+
 def test_oversize_and_too_many_pages(tmp_path, monkeypatch):
     monkeypatch.setenv("MAX_PAGES", "2")
     from app.core.config import get_settings

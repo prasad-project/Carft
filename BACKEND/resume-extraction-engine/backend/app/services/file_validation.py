@@ -77,7 +77,12 @@ def _validate_pdf(data: bytes, max_pages: int) -> ValidatedFile:
     finally:
         doc.close()
     # Best-effort active-content scan on raw bytes (misses objects hidden in compressed streams).
-    if re.search(rb"/(?:JavaScript|JS|Launch|OpenAction)\b", data):
+    # Match action dictionaries, not arbitrary text that happens to contain these names.
+    action_patterns = (
+        rb"/S\s*/(?:JavaScript|Launch)\b",
+        rb"/(?:OpenAction|AA)\s*(?:<<|\d+\s+\d+\s+R)",
+    )
+    if any(re.search(pattern, data) for pattern in action_patterns):
         raise ValidationError("ACTIVE_CONTENT", "PDF contains active content (JavaScript/Launch) and was rejected.")
     return ValidatedFile("pdf", n, warnings)
 
