@@ -9,6 +9,9 @@
 **/out/
 **/build/
 **/.pnpm-debug.log*
+**/venv/
+**/.pytest_cache/
+**/*.db
 
 # Environment files
 **/.env
