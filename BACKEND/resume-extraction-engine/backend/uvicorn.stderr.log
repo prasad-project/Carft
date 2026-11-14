@@ -1,0 +1,5 @@
+INFO:     Started server process [23088]
+INFO:     Waiting for application startup.
+2026-11-14 14:14:05,510 INFO resume started; ocr_available=False
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)

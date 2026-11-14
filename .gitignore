@@ -1,0 +1,19 @@
+# Python
+**/.venv/
+**/__pycache__/
+**/*.py[cod]
+
+# Frontend dependencies and build output
+**/node_modules/
+**/.next/
+**/out/
+**/build/
+**/.pnpm-debug.log*
+
+# Environment files
+**/.env
+**/.env.*
+!**/.env.example
+
+# Runtime logs
+**/*.log

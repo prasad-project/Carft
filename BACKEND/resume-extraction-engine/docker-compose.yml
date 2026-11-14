@@ -1,0 +1,8 @@
+services:
+  backend:
+    build: ./backend
+    env_file: .env
+    environment:
+      STORAGE_DIR: /data
+    ports: ["8000:8000"]
+    tmpfs: ["/data:uid=1000,mode=700"]   # uploads live in RAM-backed tmpfs and vanish on stop
