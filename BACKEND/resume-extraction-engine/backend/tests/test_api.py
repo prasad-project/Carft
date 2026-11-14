@@ -101,6 +101,16 @@ def test_pdf_text_containing_action_names_is_allowed(tmp_path):
     assert _upload(f).status_code == 201
 
 
+def test_pdf_navigation_action_is_allowed(tmp_path):
+    d = pymupdf.open()
+    d.new_page().insert_text((50, 50), "resume")
+    f = tmp_path / "navigation.pdf"
+    d.save(str(f))
+    data = f.read_bytes().replace(b"%%EOF", b"/OpenAction 1 0 R\n%%EOF")
+    r = client.post("/api/v1/resumes/upload", files={"file": ("navigation.pdf", data, PDF)})
+    assert r.status_code == 201
+
+
 def test_oversize_and_too_many_pages(tmp_path, monkeypatch):
     monkeypatch.setenv("MAX_PAGES", "2")
     from app.core.config import get_settings
