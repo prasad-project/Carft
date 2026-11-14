@@ -3,9 +3,11 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import BuilderPreview from '@/components/builder-preview'
+import BrandLogo from '@/components/brand-logo'
 import { ArrowRight, BriefcaseBusiness, Check, Code2, Grid2X2, Menu, Search, ShieldCheck, Sparkles, Users, X } from 'lucide-react'
+import './home-enhancements.css'
 
-function Logo() { return <Link href="#top" className="logo"><span className="logo-mark">&lt;/&gt;</span><span>DevPortfolio</span></Link> }
+function Logo() { return <BrandLogo href="#top" className="logo" /> }
 function Character({ label, tone = 'blue', flip = false }: { label: string; tone?: string; flip?: boolean }) { return <div className={`character ${flip ? 'flip' : ''}`}><span className={`char-label ${tone}`}>{label}</span><div className="head"><div className="hair"/><div className="face"/><div className="glasses"/></div><div className={`body ${tone}`}><span className="laptop">&lt;_&gt;</span></div></div> }
 
 export default function Page() {
@@ -24,6 +26,6 @@ export default function Page() {
 
     <section className="stats-band"><div className="container stats-grid">{[['10,000+','Developers'],['500+','Hiring Partners'],['2,000+','Jobs & Projects'],['99%','Satisfaction Rate']].map(([n,l]) => <div key={l}><b>{n}</b><span>{l}</span></div>)}</div></section>
     <section className="cta"><div className="container cta-inner"><div className="cta-art"><Character label="" tone="orange"/><Character label="" tone="navy"/></div><div><h2>Ready to showcase your talent?</h2><p>Join thousands of developers and get discovered by top companies.</p></div><Link className="button orange" href="/builder/upload">Create Your Portfolio <ArrowRight size={15}/></Link></div></section>
-    <footer><div className="container footer-grid"><div><Logo/><p>Build. Showcase. Get Hired.</p></div><div><h4>Product</h4><Link href="#builder">Create Portfolio</Link><Link href="#developers">Find Developers</Link><Link href="#jobs">Jobs & Freelance</Link><Link href="#pricing">Pricing</Link></div><div><h4>Company</h4><Link href="#about">About Us</Link><Link href="#blog">Blog</Link><Link href="#contact">Contact</Link><Link href="#privacy">Privacy Policy</Link></div><div><h4>Follow Us</h4><div className="socials"><a href="#github" aria-label="GitHub"><Code2 size={14}/></a><a href="#linkedin" aria-label="LinkedIn"><Users size={14}/></a><a href="#x" aria-label="X"><X size={14}/></a><a href="#youtube" aria-label="YouTube"><Sparkles size={14}/></a></div></div></div><div className="container copyright">© 2026 DevPortfolio. All rights reserved.</div></footer>
+    <footer><div className="container footer-grid"><div><Logo/><p>Build. Showcase. Get Hired.</p></div><div><h4>Product</h4><Link href="#builder">Create Portfolio</Link><Link href="#developers">Find Developers</Link><Link href="#jobs">Jobs & Freelance</Link><Link href="#pricing">Pricing</Link></div><div><h4>Company</h4><Link href="#about">About Us</Link><Link href="#blog">Blog</Link><Link href="#contact">Contact</Link><Link href="#privacy">Privacy Policy</Link></div><div><h4>Follow Us</h4><div className="socials"><a href="#github" aria-label="GitHub"><Code2 size={14}/></a><a href="#linkedin" aria-label="LinkedIn"><Users size={14}/></a><a href="#x" aria-label="X"><X size={14}/></a><a href="#youtube" aria-label="YouTube"><Sparkles size={14}/></a></div></div></div><div className="container copyright">© 2026 Crafdeck. All rights reserved.</div></footer>
   </main>
 }

@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react'
 import type { FormEvent, KeyboardEvent } from 'react'
 import Link from 'next/link'
+import BrandLogo from '../brand-logo'
 import { Bookmark, Menu, Search, X } from 'lucide-react'
 import {
   categories,
@@ -32,14 +33,11 @@ function HubNavigation() {
   return (
     <header className="hub-nav">
       <div className="hub-nav-inner">
-        <Link className="hub-logo" href="/" aria-label="DevPortfolio home">
-          <span className="hub-logo-mark" aria-hidden="true">&lt;/&gt;</span>
-          <span>DevPortfolio</span>
-        </Link>
+        <BrandLogo className="hub-logo" />
         <nav className="hub-nav-links" aria-label="Main navigation">
           {links.map((link) => <Link key={link.label} href={link.href} aria-current={link.label === 'Tech Hub' ? 'page' : undefined} className={link.label === 'Tech Hub' ? 'is-current' : undefined}>{link.label}</Link>)}
         </nav>
-        <span className="hub-profile-avatar" role="img" aria-label="DevPortfolio member profile"><span className="hub-avatar-hair"/><span className="hub-avatar-face"/><span className="hub-avatar-body"/></span>
+        <span className="hub-profile-avatar" role="img" aria-label="Crafdeck member profile"><span className="hub-avatar-hair"/><span className="hub-avatar-face"/><span className="hub-avatar-body"/></span>
         <button className="hub-mobile-toggle" type="button" aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={mobileOpen} onClick={() => setMobileOpen((open) => !open)}>
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -153,7 +151,7 @@ function VideosSection() {
     <section className="hub-section hub-cream-section" aria-labelledby="hub-videos-title">
       <div className="hub-container">
         <h2 className="hub-section-title" id="hub-videos-title">Tech Vlogs &amp; Videos</h2>
-        <p className="hub-section-subtitle">Videos from external creators. Each one links to its original source. They are not made by DevPortfolio.</p>
+        <p className="hub-section-subtitle">Videos from external creators. Each one links to its original source. They are not made by Crafdeck.</p>
         <div className="hub-video-grid">{videos.map((video) => <VideoCard key={video.id} video={video} />)}</div>
       </div>
     </section>
@@ -161,7 +159,7 @@ function VideosSection() {
 }
 
 function HubFooter() {
-  return <footer className="hub-footer"><div className="hub-container"><span>Content is curated and published by the DevPortfolio editorial team. Original publishers keep all rights to their articles and videos.</span><span>© 2026 DevPortfolio</span></div></footer>
+  return <footer className="hub-footer"><div className="hub-container"><span>Content is curated and published by the Crafdeck editorial team. Original publishers keep all rights to their articles and videos.</span><span>© 2026 Crafdeck</span></div></footer>
 }
 
 export default function TechHubPage() {

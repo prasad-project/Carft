@@ -3,10 +3,10 @@ import TechHubPage from '@/components/tech-hub/tech-hub-page'
 import './tech-hub.css'
 
 export const metadata: Metadata = {
-  title: 'Tech Hub | DevPortfolio',
+  title: 'Tech Hub | Crafdeck',
   description: 'Your daily source for technology, innovation, developer tools, and practical guides.',
   openGraph: {
-    title: 'Tech Hub | DevPortfolio',
+    title: 'Tech Hub | Crafdeck',
     description: 'Technology, innovation, and knowledge for developers.',
     type: 'website',
   },

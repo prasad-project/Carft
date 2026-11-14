@@ -7,6 +7,7 @@ import { Check, LogOut, Timer, Trophy } from 'lucide-react'
 import { arenaWebSocketUrl, getArenaSession } from '../../../lib/arena-api'
 import './play.css'
 import './result.css'
+import BrandLogo from '../../../components/brand-logo'
 
 type Question = {
   question_id: string
@@ -135,7 +136,7 @@ function PlayContent() {
   }
 
   return <main className="match-page">
-    <header className="match-topbar"><div className="match-top-inner"><Link href="/arena" className="match-brand"><span>&lt;/&gt;</span><b>Coding Arena</b></Link><i className="match-divider" /><b className="match-title">Live Match</b><Chip tone="peach">Room {room || '—'}</Chip><div className="match-actions"><span className="live-pill"><i />LIVE</span><button className="exit-button" onClick={() => router.push('/arena')}><LogOut size={14} /> Exit Match</button></div></div></header>
+    <header className="match-topbar"><div className="match-top-inner"><BrandLogo href="/arena" className="match-brand" compact /><i className="match-divider" /><b className="match-title">Live Match</b><Chip tone="peach">Room {room || '—'}</Chip><div className="match-actions"><span className="live-pill"><i />LIVE</span><button className="exit-button" onClick={() => router.push('/arena')}><LogOut size={14} /> Exit Match</button></div></div></header>
     <div className="match-shell">
       {error && <p className="match-error" role="alert">{error}</p>}
       {!question && <section className="question-card match-loading"><Timer size={22} /> Waiting for the match to start…</section>}

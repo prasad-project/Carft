@@ -3,7 +3,7 @@ import ResumeUpload from './resume-upload'
 import './upload.css'
 
 export const metadata: Metadata = {
-  title: 'Upload your resume | DevPortfolio',
+  title: 'Upload your resume | Crafdeck',
   description: 'Choose a resume and continue to your developer portfolio builder.',
 }
 
