@@ -1,0 +1,22 @@
+x-app: &app
+  build: .
+  env_file: .env
+  depends_on: [db, redis]
+services:
+  db:
+    image: postgres:16
+    environment: {POSTGRES_PASSWORD: postgres, POSTGRES_DB: technews}
+    volumes: [pgdata:/var/lib/postgresql/data]
+  redis:
+    image: redis:7
+  api:
+    <<: *app
+    ports: ["8000:8000"]
+  worker:
+    <<: *app
+    command: celery -A app.celery_app.celery worker -l info
+  beat:            # EXACTLY ONE replica. Never scale this service.
+    <<: *app
+    command: celery -A app.celery_app.celery beat -l info -s /tmp/celerybeat-schedule
+    deploy: {replicas: 1}
+volumes: {pgdata: {}}

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { Bookmark, Heart, MessageCircle, Play, Share2 } from 'lucide-react'
 import type { ArtworkKind, Story, Video } from './tech-hub-data'
 
@@ -67,6 +68,7 @@ export function StoryCard({
   onLike,
   onSave,
   onShare,
+  showArtwork = true,
 }: {
   story: Story
   variant?: 'standard' | 'compact' | 'feature'
@@ -75,12 +77,13 @@ export function StoryCard({
   onLike: () => void
   onSave: () => void
   onShare: () => void
+  showArtwork?: boolean
 }) {
   const [expanded, setExpanded] = useState(false)
 
   return (
     <article className={`hub-story-card hub-story-card-${variant}`} id={`story-${story.id}`}>
-      <StoryArtwork kind={story.art} label={`Abstract illustration for ${story.category}`} />
+      {showArtwork && <StoryArtwork kind={story.art} label={`Abstract illustration for ${story.category}`} />}
       <div className="hub-story-content">
         <div className="hub-story-meta-line">
           <CategoryBadge category={story.category} />
@@ -89,6 +92,7 @@ export function StoryCard({
         <h3>{story.title}</h3>
         {variant !== 'compact' && <p className="hub-story-summary">{story.summary}</p>}
         <div className="hub-byline"><span>{story.source} ↗</span><span>· {story.dateLabel}</span></div>
+        {variant !== 'feature' && story.slug && <Link className="hub-read-more" href={`/tech-hub/news/${story.slug}`}>Read <span aria-hidden="true">→</span></Link>}
         {variant === 'feature' && <button className="hub-read-more" type="button" aria-expanded={expanded} onClick={() => setExpanded((open) => !open)}>{expanded ? 'Read Less' : 'Read More'} <span aria-hidden="true">→</span></button>}
         {variant === 'feature' && expanded && <p className="hub-feature-expanded">The report compares code completion, response quality and repository-level context, showing how community-built models are improving on everyday development work.</p>}
         <StoryActions story={story} liked={liked} saved={saved} onLike={onLike} onSave={onSave} onShare={onShare} />

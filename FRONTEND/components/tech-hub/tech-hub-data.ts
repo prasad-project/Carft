@@ -2,6 +2,8 @@ export type ArtworkKind = "orange-orb" | "purple-blocks" | "target" | "dot-orb" 
 
 export type Story = {
   id: string
+  slug?: string
+  originalUrl?: string
   title: string
   category: string
   summary: string
@@ -26,7 +28,10 @@ export type Video = {
   likes: number
   comments: number
   art: ArtworkKind
+  topics: VideoTopic[]
 }
+
+export type VideoTopic = "Featured / Top stories" | "Trending now" | "AI & machine learning" | "Developer discoveries" | "Latest research & open source"
 
 export const categories = [
   "For You",
@@ -41,17 +46,12 @@ export const categories = [
   "Cybersecurity",
 ]
 
-export const topics = [
-  "Agentic AI",
-  "OpenAI",
-  "Gemini",
-  "Claude",
-  "Python",
-  "LangChain",
-  "Machine Learning",
-  "Robotics",
-  "Cloud Computing",
-  "Open Source",
+export const videoTopics: VideoTopic[] = [
+  "Featured / Top stories",
+  "Trending now",
+  "AI & machine learning",
+  "Developer discoveries",
+  "Latest research & open source",
 ]
 
 export const featuredStory: Story = {
@@ -297,6 +297,7 @@ export const videos: Video[] = [
     likes: 210,
     comments: 34,
     art: "navy-orb",
+    topics: ["Featured / Top stories", "AI & machine learning", "Latest research & open source"],
   },
   {
     id: "database-video",
@@ -308,6 +309,7 @@ export const videos: Video[] = [
     likes: 96,
     comments: 9,
     art: "orange-orb",
+    topics: ["Featured / Top stories", "Developer discoveries", "Latest research & open source"],
   },
   {
     id: "linux-video",
@@ -319,6 +321,7 @@ export const videos: Video[] = [
     likes: 142,
     comments: 21,
     art: "dot-orb",
+    topics: ["Featured / Top stories", "Trending now", "Developer discoveries"],
   },
   {
     id: "modern-css-video",
@@ -330,6 +333,7 @@ export const videos: Video[] = [
     likes: 78,
     comments: 6,
     art: "green-wave",
+    topics: ["Featured / Top stories", "Trending now", "Developer discoveries"],
   },
 ]
 
