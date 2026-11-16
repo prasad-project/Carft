@@ -17,11 +17,7 @@ type SortMode = 'Latest' | 'Top stories'
 function HubNavigation() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const links = [
-    { label: 'Home', href: '/' },
-    { label: 'Developers', href: '/#developers' },
-    { label: 'Arena', href: '/arena' },
     { label: 'Tech Hub', href: '/tech-hub' },
-    { label: 'Pricing', href: '/#pricing' },
   ]
 
   return (
