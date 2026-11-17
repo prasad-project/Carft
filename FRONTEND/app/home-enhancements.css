@@ -1,46 +1,1142 @@
-/* Keep the navigation unchanged while giving the hero artwork more presence. */
-.hero{padding-top:28px;background-color:#f7f5ec}
-.hero h1{font-size:49px;max-width:745px;margin-top:13px}
-.hero-copy{font-size:13.7px;margin-bottom:17px}
-.hero-buttons{gap:11px}
-.hero-buttons .button{font-size:12.7px;padding:13px 22px}
-.showcase{height:363px;gap:13px}
-.profile-card{width:256px;padding:12px;border-radius:17px 17px 0 0}
-.profile-head{padding:11px;border-radius:13px;gap:11px}
-.profile-avatar{width:55px;height:55px;font-size:16px}
-.profile-head h3{font-size:14px}
-.profile-head p{font-size:10px}
-.open{font-size:9px}
-.chips{gap:5px;margin:10px 0}
-.chips span{padding:4px 7px;font-size:8px}
-.mini-stats b{font-size:16px}
-.mini-stats small{font-size:7px}
-.bio{font-size:11px;margin:11px 0}
-.rounds{gap:5px}
-.rounds span{width:23px;height:23px}
-.qr-card{width:106px;height:154px;border-radius:15px 15px 0 0}
-.qr-grid{width:60px;height:60px}
-.qr-card strong{font-size:10px}
-.side{width:212px;height:159px}
-.character{width:65px;height:136px}
-.char-label{font-size:8px;padding:3px 7px}
-.head{top:27px;left:20px;width:32px;height:37px}
-.hair{width:32px;height:25px}
-.body{width:63px;height:76px}
-.laptop{bottom:9px;left:20px}
-.hand-note{font-size:11px;top:22px}
-.hand-note span{font-size:22px}
+/* ==========================================================================
+   CRAFDECK HERO — NEO-BRUTALIST DEVELOPER IDENTITY DESIGN
+   Matching Image 2 exact visual style, typography, badges, windows & diagram
+   ========================================================================== */
 
-@media(max-width:680px){
-  .hero{padding-top:22px}
-  .hero h1{font-size:35px;max-width:700px}
-  .hero-copy{font-size:11px}
-  .hero-buttons .button{font-size:12px;padding:12px 20px}
-  .showcase{height:auto;min-height:350px}
-  .profile-card{width:min(242px,62vw);padding:11px}
-  .qr-card{width:90px;height:145px}
-  .side{width:130px;height:150px}
-  .character{width:60px;height:126px}
-  .head{top:25px;left:18px;width:30px;height:34px}
-  .body{width:58px;height:71px}
+/* Full Home Page Graph Grid Background */
+html,
+body,
+.home-page-neo {
+  background-color: #f8f7ee !important;
+  background-image: 
+    linear-gradient(to right, #e7e3d5 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, #e7e3d5 1.5px, transparent 1.5px) !important;
+  background-size: 30px 30px !important;
+  background-attachment: fixed !important;
+  min-height: 100vh;
 }
+
+/* Hero Container */
+.hero-neo {
+  position: relative;
+  overflow: hidden;
+  background: transparent !important;
+  padding: 44px 0 52px;
+  border-bottom: 2px solid #12233b;
+}
+
+/* --------------------------------------------------------------------------
+   FULL HOME PAGE UNIFIED BACKGROUND & NEO-BRUTALIST SECTIONS
+   -------------------------------------------------------------------------- */
+.home-page-neo .navbar {
+  background: #ffffff;
+  border-bottom: 2px solid #12233b;
+}
+
+.home-page-neo .features {
+  background: transparent !important;
+  padding: 56px 0 40px;
+}
+
+.home-page-neo .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  padding: 0;
+}
+
+.home-page-neo .feature {
+  background: #ffffff !important;
+  border: 2px solid #12233b !important;
+  border-radius: 14px;
+  box-shadow: 3.5px 3.5px 0 #12233b;
+  padding: 22px 18px !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.home-page-neo .feature:first-child {
+  padding-left: 18px !important;
+}
+
+.home-page-neo .feature:last-child {
+  border: 2px solid #12233b !important;
+}
+
+.home-page-neo .feature:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4.5px 4.5px 0 #12233b;
+}
+
+.home-page-neo .feature-icon {
+  border: 1.5px solid #12233b;
+}
+
+.home-page-neo .builder {
+  background: transparent !important;
+  padding: 68px 0;
+}
+
+.home-page-neo .stats-band,
+section.stats-band,
+.stats-band {
+  background-color: #f8f7ee !important;
+  background-image: 
+    linear-gradient(to right, #e7e3d5 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, #e7e3d5 1.5px, transparent 1.5px) !important;
+  background-size: 30px 30px !important;
+  border-top: 2px solid #12233b !important;
+  border-bottom: 2px solid #12233b !important;
+  padding: 38px 0;
+}
+
+.home-page-neo .stats-grid > div {
+  border-right: 2px solid #12233b !important;
+}
+
+.home-page-neo .stats-grid > div:last-child {
+  border-right: 0 !important;
+}
+
+.home-page-neo .cta {
+  background: transparent !important;
+  padding: 52px 0;
+}
+
+.home-page-neo .cta-inner {
+  border: 2px solid #12233b;
+  box-shadow: 4px 4px 0 #12233b;
+}
+
+.home-page-neo footer,
+footer {
+  background-color: #0f1b2d !important;
+  background-image: none !important;
+  border-top: 2px solid #12233b !important;
+  padding: 52px 0 32px !important;
+  color: #ffffff !important;
+}
+
+.home-page-neo footer .footer-grid h4 {
+  color: #ffffff !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  margin-bottom: 6px !important;
+}
+
+.home-page-neo footer .footer-grid p {
+  color: #94a3b8 !important;
+  font-size: 12px !important;
+}
+
+.home-page-neo footer .footer-grid a {
+  color: #94a3b8 !important;
+  font-size: 11.5px !important;
+  transition: color 0.15s ease;
+}
+
+.home-page-neo footer .footer-grid a:hover {
+  color: #f28c1e !important;
+}
+
+.home-page-neo footer .brand-logo {
+  color: #ffffff !important;
+}
+
+.home-page-neo footer .socials a {
+  width: 30px !important;
+  height: 30px !important;
+  border: 1.5px solid #334155 !important;
+  border-radius: 50% !important;
+  color: #cbd5e1 !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  display: grid;
+  place-items: center;
+  transition: all 0.15s ease;
+}
+
+.home-page-neo footer .socials a:hover {
+  border-color: #f28c1e !important;
+  color: #f28c1e !important;
+  background: rgba(242, 140, 30, 0.12) !important;
+}
+
+.home-page-neo footer .copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+  padding-top: 22px !important;
+  font-size: 11px !important;
+  color: #64748b !important;
+}
+
+@media (max-width: 900px) {
+  .home-page-neo .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .home-page-neo .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  .home-page-neo .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .home-page-neo .stats-grid > div:nth-child(2) {
+    border-right: 0 !important;
+  }
+}
+
+
+.hero-neo-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.25fr);
+  gap: 36px;
+  align-items: start;
+}
+
+/* --------------------------------------------------------------------------
+   LEFT COLUMN — BRANDING, HEADLINE, PILLS, COPY, CTA, CHECKLIST
+   -------------------------------------------------------------------------- */
+.hero-neo-left {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+/* Kicker / Eyebrow */
+.hero-neo-eyebrow {
+  display: inline-flex;
+  align-self: flex-start;
+  background: #111e38;
+  color: #ff6b35;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #111e38;
+}
+
+/* Main Headline */
+.hero-neo-title {
+  font-size: 48px;
+  line-height: 1.06;
+  font-weight: 850;
+  letter-spacing: -1.5px;
+  color: #12233b;
+  margin: 0 0 18px;
+}
+
+.hero-neo-title-accent {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.hero-neo-wave {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 14px;
+  pointer-events: none;
+}
+
+/* Interactive Neo-Brutalist Pills */
+.hero-neo-pills-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+
+.hero-neo-pills-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero-neo-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px 10px 18px;
+  border: 2px solid #12233b;
+  border-radius: 14px;
+  box-shadow: 3.5px 3.5px 0 #12233b;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero-neo-pill:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4.5px 4.5px 0 #12233b;
+}
+
+.hero-neo-pill:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1.5px 1.5px 0 #12233b;
+}
+
+.hero-neo-pill .pill-badge {
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  background: #ffffff;
+  border: 1.5px solid #12233b;
+  border-radius: 999px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #12233b;
+  padding: 1px 8px;
+  white-space: nowrap;
+}
+
+.hero-neo-pill .pill-text {
+  font-size: 24px;
+  font-weight: 850;
+  color: #12233b;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+/* Individual Pill Color Schemes */
+.pill-peach {
+  background: #feddc7;
+}
+
+.pill-blue {
+  background: #d8e7fe;
+}
+
+.pill-mint {
+  background: #d1f3e0;
+}
+
+/* Small Orange Vertical Bar beside Stay Updated */
+.pill-orange-tab {
+  width: 13px;
+  height: 42px;
+  background: #f28c1e;
+  border: 2px solid #12233b;
+  box-shadow: 2.5px 2.5px 0 #12233b;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Descriptive Copy */
+.hero-neo-copy {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #4a5568;
+  max-width: 440px;
+  margin: 0 0 22px;
+  font-weight: 500;
+}
+
+/* Call to Action Buttons */
+.hero-neo-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.neo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 800;
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: 2px solid #12233b;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.neo-btn-orange {
+  background: #f28c1e;
+  color: #12233b;
+  box-shadow: 3px 3px 0 #12233b;
+}
+
+.neo-btn-orange:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 #12233b;
+}
+
+.neo-btn-orange:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #12233b;
+}
+
+.neo-btn-white {
+  background: #ffffff;
+  color: #12233b;
+  box-shadow: 2px 2px 0 #12233b;
+}
+
+.neo-btn-white:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 #12233b;
+}
+
+.neo-btn-white:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 #12233b;
+}
+
+/* Feature Checklist Tags */
+.hero-neo-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.checklist-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.checklist-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #ffffff;
+  border: 1.5px solid #12233b;
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #12233b;
+}
+
+.check-box {
+  width: 9px;
+  height: 9px;
+  border: 1.5px solid #12233b;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.check-blue { background: #93c5fd; }
+.check-orange { background: #fed7aa; }
+.check-green { background: #86efac; }
+
+/* Covering Row */
+.hero-neo-covering {
+  border-top: 1.5px solid #12233b;
+  padding-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.covering-label {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #64748b;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.covering-tags {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.covering-tag {
+  display: inline-block;
+  background: #ffffff;
+  border: 1.5px solid #12233b;
+  border-radius: 7px;
+  padding: 3px 9px;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #12233b;
+  text-decoration: none;
+  transition: transform 0.12s ease;
+}
+
+.covering-tag:hover {
+  transform: translateY(-1px);
+  background: #fef9c3;
+}
+
+/* --------------------------------------------------------------------------
+   RIGHT COLUMN — THE 3 FLOATING BROWSER WINDOWS & CONNECTOR
+   -------------------------------------------------------------------------- */
+.hero-neo-right {
+  position: relative;
+  width: 100%;
+}
+
+.neo-showcase-board {
+  position: relative;
+  display: grid;
+  grid-template-columns: 248px 1fr;
+  gap: 34px;
+  align-items: start;
+}
+
+/* Common Window Styling */
+.neo-window {
+  position: relative;
+  background: #ffffff;
+  border: 2px solid #12233b;
+  border-radius: 16px;
+  box-shadow: 4px 4px 0 #12233b;
+  z-index: 2;
+}
+
+.neo-window-badges {
+  position: absolute;
+  top: -11px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.win-badge {
+  display: inline-block;
+  border: 1.5px solid #12233b;
+  border-radius: 999px;
+  font-size: 9px;
+  font-weight: 800;
+  color: #12233b;
+  padding: 1.5px 8px;
+  line-height: 1.2;
+}
+
+.badge-blue { background: #dbeafe; }
+.badge-yellow { background: #fef08a; }
+.badge-peach { background: #feddc7; }
+.badge-mint { background: #d1f3e0; }
+
+.neo-window-header {
+  height: 30px;
+  border-bottom: 1.5px solid #12233b;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border-radius: 14px 14px 0 0;
+}
+
+.win-controls {
+  display: flex;
+  align-items: center;
+  gap: 3.5px;
+}
+
+.win-controls span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid #94a3b8;
+  display: inline-block;
+  background: #ffffff;
+}
+
+.win-url {
+  font-size: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: #334155;
+  font-weight: 500;
+  margin-left: 2px;
+}
+
+.win-title {
+  font-size: 10px;
+  font-weight: 600;
+  color: #334155;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --------------------------------------------------------------------------
+   CARD 1: 01 · PORTFOLIO (LEFT WINDOW)
+   -------------------------------------------------------------------------- */
+.window-portfolio {
+  width: 248px;
+}
+
+.portfolio-body {
+  padding: 14px 12px 12px;
+}
+
+.neo-profile-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.neo-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid #12233b;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f28c1e;
+}
+
+.neo-avatar-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.neo-profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.neo-profile-name {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #12233b;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.neo-profile-role {
+  font-size: 10px;
+  color: #64748b;
+  margin: 1px 0 3px;
+  font-weight: 500;
+}
+
+.neo-badge-open {
+  display: inline-block;
+  align-self: flex-start;
+  background: #dcfce7;
+  border: 1px solid #10b981;
+  border-radius: 999px;
+  font-size: 8.5px;
+  font-weight: 700;
+  color: #047857;
+  padding: 1px 7px;
+  line-height: 1.2;
+}
+
+/* Skills chips */
+.neo-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.neo-chips-row span {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  font-size: 9px;
+  font-weight: 600;
+  color: #1e293b;
+  padding: 1.5px 6px;
+}
+
+/* Projects Grid */
+.neo-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.neo-project-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.neo-project-thumb {
+  height: 48px;
+  border: 1.5px solid #12233b;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.thumb-orange {
+  background: #ea8a3a;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+}
+
+.thumb-circle-navy {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #12233b;
+}
+
+.thumb-bar {
+  position: absolute;
+  left: 8px;
+  top: 12px;
+  width: 22px;
+  height: 3px;
+  background: #12233b;
+  border-radius: 2px;
+}
+
+.thumb-navy {
+  background: #0b2e6b;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb-grid-dots {
+  position: absolute;
+  inset: 5px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+  opacity: 0.45;
+}
+
+.thumb-grid-dots i {
+  width: 2px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: block;
+}
+
+.thumb-circle-yellow {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #f59e0b;
+  z-index: 1;
+}
+
+.neo-project-name {
+  font-size: 9.5px;
+  font-weight: 750;
+  color: #12233b;
+}
+
+/* Portfolio Footer (Socials + QR) */
+.neo-portfolio-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 8px;
+}
+
+.neo-social-icons {
+  display: flex;
+  gap: 4px;
+}
+
+.neo-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 4px;
+  border: 1.5px solid #12233b;
+  border-radius: 5px;
+  font-size: 9px;
+  font-weight: 800;
+  color: #12233b;
+  background: #ffffff;
+}
+
+.neo-qr-mini {
+  width: 34px;
+  height: 34px;
+}
+
+.qr-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   DIAGRAM CONNECTOR LINES & PIN
+   -------------------------------------------------------------------------- */
+.neo-diagram-connector {
+  position: absolute;
+  left: 248px;
+  top: 0;
+  bottom: 0;
+  width: 34px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.connector-pin {
+  position: absolute;
+  left: 17px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #f28c1e;
+  border: 2px solid #12233b;
+  z-index: 3;
+}
+
+.connector-line-v {
+  position: absolute;
+  left: 17px;
+  top: 76px;
+  bottom: 120px;
+  border-left: 2px dashed #94a3b8;
+  transform: translateX(-1px);
+}
+
+.connector-branch-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 17px;
+  border-top: 2px dashed #94a3b8;
+  transform: translateY(-1px);
+}
+
+.connector-branch-top {
+  position: absolute;
+  left: 17px;
+  top: 76px;
+  right: 0;
+  border-top: 2px dashed #94a3b8;
+}
+
+.connector-branch-bottom {
+  position: absolute;
+  left: 17px;
+  bottom: 120px;
+  right: 0;
+  border-top: 2px dashed #94a3b8;
+}
+
+/* --------------------------------------------------------------------------
+   RIGHT STACKED COLUMN (ARENA & NEWS)
+   -------------------------------------------------------------------------- */
+.neo-stacked-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CARD 2: 02 · ARENA */
+.window-arena {
+  width: 100%;
+}
+
+.arena-body {
+  padding: 12px 14px 11px;
+}
+
+.neo-arena-q-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 11px;
+}
+
+.neo-timer-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3.5px solid #f97316;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: #ffffff;
+}
+
+.neo-timer-circle span {
+  font-size: 11px;
+  font-weight: 850;
+  color: #12233b;
+  letter-spacing: -0.5px;
+}
+
+.neo-q-text {
+  font-size: 11px;
+  font-weight: 750;
+  line-height: 1.32;
+  color: #12233b;
+  margin: 0;
+}
+
+/* Options 2x2 grid */
+.neo-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.neo-opt {
+  background: #ffffff;
+  border: 1.5px solid #12233b;
+  border-radius: 7px;
+  padding: 5px 8px;
+  font-size: 10px;
+  font-weight: 650;
+  color: #12233b;
+  text-align: left;
+}
+
+.opt-selected {
+  background: #fed7aa;
+  font-weight: 800;
+}
+
+/* Scoreboard */
+.neo-arena-scoreboard {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.arena-score-player {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.arena-player-avatar {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1.5px solid #12233b;
+}
+
+.avatar-orange { background: #f28c1e; }
+.avatar-blue { background: #0b3b7a; }
+
+.arena-player-pts {
+  font-size: 11px;
+  font-weight: 800;
+  color: #12233b;
+}
+
+.arena-vs-bar {
+  flex: 1;
+  height: 8px;
+  background: #e2e8f0;
+  border: 1.5px solid #12233b;
+  border-radius: 999px;
+  overflow: hidden;
+  display: flex;
+}
+
+.vs-bar-orange {
+  background: #f28c1e;
+  height: 100%;
+}
+
+.vs-bar-blue {
+  background: #93c5fd;
+  height: 100%;
+}
+
+/* CARD 3: 03 · NEWS */
+.window-news {
+  width: 100%;
+}
+
+.news-body {
+  padding: 12px 14px;
+}
+
+.neo-news-story {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.news-thumb {
+  width: 58px;
+  height: 42px;
+  border: 1.5px solid #12233b;
+  border-radius: 7px;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb-purple {
+  background: #8b5cf6;
+}
+
+.news-thumb-inner-card {
+  width: 32px;
+  height: 26px;
+  background: #fef08a;
+  border-radius: 4px;
+  border: 1px solid #12233b;
+}
+
+.news-thumb-inner-dot {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 12px;
+  height: 12px;
+  background: #c084fc;
+  border-radius: 3px;
+}
+
+.thumb-tan {
+  background: #fed7aa;
+}
+
+.news-target-ring {
+  border-radius: 50%;
+  border: 1.5px solid #12233b;
+  position: absolute;
+}
+
+.ring-outer { width: 30px; height: 30px; }
+.ring-mid { width: 18px; height: 18px; }
+.ring-dot { width: 6px; height: 6px; background: #12233b; }
+
+.news-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-tag {
+  display: inline-block;
+  align-self: flex-start;
+  border: 1px solid #12233b;
+  border-radius: 999px;
+  font-size: 8px;
+  font-weight: 800;
+  padding: 0.5px 6px;
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+
+.tag-ai { background: #d1f3e0; }
+.tag-tools { background: #dbeafe; }
+
+.news-headline {
+  font-size: 10.5px;
+  font-weight: 750;
+  color: #12233b;
+  margin: 0 0 2px;
+  line-height: 1.3;
+}
+
+.news-meta {
+  font-size: 9px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.news-divider {
+  border-top: 1.5px dashed #cbd5e1;
+  margin: 9px 0;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .hero-neo-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .hero-neo-left {
+    max-width: 600px;
+  }
+  
+  .neo-showcase-board {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-neo {
+    padding: 30px 0 40px;
+  }
+  
+  .hero-neo-title {
+    font-size: 36px;
+  }
+  
+  .hero-neo-pill .pill-text {
+    font-size: 20px;
+  }
+  
+  .hero-neo-buttons {
+    flex-wrap: wrap;
+  }
+  
+  .neo-showcase-board {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .window-portfolio {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  .neo-diagram-connector {
+    display: none;
+  }
+  
+  .neo-stacked-column {
+    max-width: 320px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* Retain CTA section avatar styles */
+.character { position: relative; width: 60px; height: 126px; }
+.char-label { position: absolute; top: 0; left: 50%; transform: translateX(-50%); white-space: nowrap; background: #fff; border: 1px solid var(--navy); border-right: 3px solid var(--orange); border-radius: 8px; padding: 2px 7px; font-size: 8px; font-weight: 700; }
+.head { position: absolute; top: 25px; left: 18px; width: 30px; height: 34px; background: #f0a56d; border: 1px solid var(--navy); border-radius: 16px 16px 12px 12px; }
+.hair { position: absolute; background: #12243d; width: 29px; height: 23px; left: 0; top: -3px; border-radius: 14px 14px 3px 3px; }
+.face { width: 4px; height: 4px; border-radius: 50%; background: #152338; position: absolute; left: 8px; top: 15px; box-shadow: 10px 0 #152338; }
+.glasses { position: absolute; top: 13px; left: 6px; width: 18px; height: 7px; border: 1px solid #16283e; border-radius: 4px; }
+.body { position: absolute; bottom: 0; left: 2px; width: 58px; height: 71px; border: 1px solid var(--navy); border-radius: 28px 28px 0 0; background: #f28c1e; }
+.body.navy { background: #18385f; }
+.laptop { position: absolute; bottom: 8px; left: 18px; color: #fff; font-size: 10px; border: 1px solid #fff; padding: 4px 5px; border-radius: 3px; }
